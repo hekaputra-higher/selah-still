@@ -1,4 +1,5 @@
 # Architecture
+
 Next.js App Router + TypeScript, deployed on Vercel. Public reading page is statically renderable. A client component manages the reflection flow. Supabase JS handles browser authentication and authenticated Data API requests. Postgres checks each row's user_id against auth.uid(). Browser sessions are not trusted by any server authorization code; there are no private server routes in this slice.
 
 Only NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY enter the client bundle. Privileged keys are unnecessary. Private data is never pre-rendered or cached by Next.js. Session storage is confined to visibly labelled, fictional rehearsal mode when the backend is absent.

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import type { User } from "@supabase/supabase-js";
-import Link from 'next/link';
+import Link from "next/link";
 import { supabase } from "../lib/supabase";
 import { chapter, prompts } from "../lib/scripture";
 import {

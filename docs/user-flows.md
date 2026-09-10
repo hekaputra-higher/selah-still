@@ -1,4 +1,5 @@
 # User journeys
+
 Home → passage → optional full chapter → Draw Near → Write It → Examine It → Look at Him → Listen + Live It → Save → sign in if necessary → Save → My reflections.
 
 Returning user: Sign in → My reflections. Signed-out visitor can read and write without signing in; refreshing unsaved writing triggers the browser's leave warning. Unsaved drafts are not persisted privately across browser closures.
