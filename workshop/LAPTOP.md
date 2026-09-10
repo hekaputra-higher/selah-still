@@ -33,8 +33,8 @@ First prompt: “Read docs/ and inspect Git status and the repository. Plan only
 6. Terminal: quality and privacy evidence
 7. GitHub: dedicated repository / PR
 8. Vercel Preview (signed in)
-9. Production — https://selah-still-workshop.vercel.app/
-10. Attendee page — https://selah-still-workshop.vercel.app/workshop
+9. Production — [NEW HVV URL PENDING]
+10. Attendee page — [NEW HVV URL PENDING]
 11. Local backup — http://localhost:3001
 12. Offline HTML / emergency cue sheet
 
@@ -43,8 +43,10 @@ First prompt: “Read docs/ and inspect Git status and the repository. Plan only
 - [ ] Laptop local UI and backup both work; offline fallback opens and saves fictional writing.
 - [ ] Real demo A can save, refresh, re-login and retrieve; B privacy test passed after provisioning.
 - [ ] GitHub, Vercel, Supabase, coding agent and Cosmos are signed in.
-- [ ] Open production/attendee page on your phone; scan companion QR.
+- [ ] Open production/attendee page on your phone; use a replacement QR only after the new attendee URL is verified.
 - [ ] Complete the uninterrupted timed run using TONIGHT-CUE-SHEET.md; record actual total.
 - [ ] Offline deck downloaded; prompts accessible; terminal font and browser zoom readable.
 - [ ] Do Not Disturb on; Slack/email/messages and confidential TIC/hyperlocal tabs closed; credentials hidden.
 - [ ] Charger, HDMI/USB-C adapter, hotspot; mouse and extension lead if useful.
+
+When cloud setup is blocked, use FALLBACK-MODES.md and the local attendee START-HERE.md. Do not use old deployment bookmarks.

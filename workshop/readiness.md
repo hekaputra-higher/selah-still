@@ -1,43 +1,43 @@
-# WORKSHOP READINESS — verification follow-up
+# WORKSHOP READINESS — Higher Vision Ventures correction
 
-| Area               | Status  | Evidence                                                                                                                        |
-| ------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| SELAH STILL        | WARNING | Production UI/rehearsal verified; real account persistence blocked. Local development module-format bug fixed.                  |
-| SUPABASE           | BLOCKED | Only unrelated hyperlocal os dev project is accessible. Organization/cost decision pending.                                     |
-| RLS PRIVACY TEST   | BLOCKED | Test expanded to include owner update and re-login retrieval; cannot run without dedicated backend/two accounts.                |
-| GITHUB             | BLOCKED | Dedicated repository search returned no results. Local checkpoints preserved; no remote/PR.                                     |
-| VERCEL PREVIEW     | WARNING | Existing preview shows Vercel sign-in; app behind it not tested this session. Git-triggered flow blocked.                       |
-| VERCEL PRODUCTION  | WARNING | Public UI and attendee page tested. No real backend configured.                                                                 |
-| QUALITY CHECKS     | READY   | Formatting, lint, types, three tests and production build passed after module correction. Mobile/axe remain unexecuted.         |
-| LIVE DEMO          | BLOCKED | Full timed rehearsal cannot complete while backend/release gates are blocked.                                                   |
-| ATTENDEE RESOURCES | READY   | Ten-step public start page and working link checked at desktop size; phone check remains.                                       |
-| LOCAL BACKUP       | WARNING | Terminal verified HTTP 200 while live was broken; laptop/browser visual checks remain.                                          |
-| OFFLINE BACKUP     | WARNING | Self-contained resources and JavaScript syntax checked. Cloud browser blocks local files; actual opening remains a laptop task. |
+| Area                               | Status  | Evidence / remaining gate                                                                      |
+| ---------------------------------- | ------- | ---------------------------------------------------------------------------------------------- |
+| Higher Vision Ventures environment | BLOCKED | All three current connections still use HyperLocal.                                            |
+| Selah Still                        | WARNING | Working local code preserved; new backend not connected.                                       |
+| Supabase                           | BLOCKED | Correct organization not visible.                                                              |
+| Real persistence                   | BLOCKED | No new project or credentials.                                                                 |
+| RLS two-user privacy test          | BLOCKED | Script ready; no two-user live result.                                                         |
+| GitHub — selah-still               | BLOCKED | Correct public repo found; local origin set; connection cannot push.                           |
+| Vercel Preview                     | BLOCKED | Correct team inaccessible.                                                                     |
+| Vercel Production                  | BLOCKED | No verified Higher Vision Ventures production URL.                                             |
+| Quality                            | READY   | Local formatting/lint/types/tests/build pass; cloud and browser acceptance remain separate.    |
+| Full-stack live demo               | BLOCKED | Environment and release flow cannot be rehearsed yet.                                          |
+| Fallback demo                      | WARNING | Four modes and transitions prepared; local server recovery tested; laptop walkthrough pending. |
+| Attendee resources                 | WARNING | Local resource preserved; new hosted destination and QR pending.                               |
+| Local backup                       | WARNING | Terminal HTTP recovery verified; laptop visual check pending.                                  |
+| Offline backup                     | WARNING | Self-contained file and syntax inspected; laptop opening pending.                              |
 
-## What changed
+## Connections actually in use
 
-- Fixed package type from CommonJS to ES modules in Selah Still and generic starter. This resolved observed HTTP 500 development compilation errors; production-only checks had missed them.
-- Added missing owner-update and retrieval-after-re-login assertions to the real Supabase test. No policy changes or new product features.
-- Preserved all old tags; new 06-local-recovery is the latest usable code checkpoint. main and demo/live include the fix. 05-finished remains historical and should not be used to start the live dev server.
-- Added TONIGHT-CUE-SHEET.md with the requested 0–40 minute rhythm, keeping four activities, plus one-screen EMERGENCY.md and LAPTOP.md.
+GitHub connection: hekaputra-hyper (wrong account; no writes made). Intended repo discovered: hekaputra-higher/selah-still, https://github.com/hekaputra-higher/selah-still . Local origin points to that correct target. Nothing pushed.
+Supabase connection: HyperLocal only; intended Higher Vision Ventures organization/project/ref unavailable.
+Vercel connection: HyperLocal only; intended Higher Vision Ventures team/project/Production URL unavailable.
+No populated local environment variables or local Vercel linkage exist. Do not reuse old production or attendee links. The old QR has been removed from active materials.
 
-## Rehearsal result
+## Rehearsal results
 
-Full 35–40-minute rehearsal: NOT RUN / BLOCKED. No invented total or presentation timings.
-Terminal recovery drill: 4.1 seconds successful run. Deliberate page syntax error → live HTTP 500 → backup HTTP 200 → exact original restored → live HTTP 200.
-Prior attempts exposed duplicate-server startup and the module-format bug. Fix applied; prestart the two separate copies.
+Full-stack duration: not run, blocked. Fallback presentation duration: not measured. Terminal code-failure recovery results are in evidence/recovery-drill.txt; they are not a presentation duration.
+Sections running long: cannot assess delivery without a timed run. Cut optional shares and use saved build evidence if needed. Stop individual troubleshooting at 60 seconds.
 
-## Minimum unblock actions
+## Plan tonight
 
-1. Hadi selects the dedicated Supabase project's organization. The only visible choice is hyperlocal tech co (vtuwziqrfnohsidmvlrc). The Supabase get_cost tool explicitly says to ask the user for the organization first, then repeat the quoted cost for confirmation. No creation cost has yet been quoted or approved.
-2. Create an empty selah-still-workshop GitHub repository and grant the existing connection access. Available connector tools cannot create a repository. After access is available, the prepared history can be pushed and a PR created.
-3. Complete dedicated backend provisioning, migration, public configuration, two synthetic confirmed accounts and live RLS tests; then Git-linked Preview/merge/Production verification.
-4. Hadi runs the laptop checks and uninterrupted full rehearsal, including mobile and offline opening, after the technical blockers are resolved.
+Preferred: A (full live), then B (prepared full-stack) if only live coding fails.
+Fallback: C when backend/cloud is unavailable; D if internet/runtime fails. Exact sequence and sentences are in workshop/FALLBACK-MODES.md.
+The workshop can be READY with a verified C/D plan even if A/B remain blocked. At this handoff, laptop C/D rehearsal has not been completed; therefore no ready claim is made.
 
-## Evidence and limits
+## Minimum personal actions
 
-The production browser checks covered chapter expansion, step focus/labels, empty-save alert, sign-in handoff, fictional rehearsal save/retrieve, attendee navigation and no desktop overflow. No app-origin console errors were observed; browser-extension metadata errors were separate. The cloud browser explicitly blocks localhost and file URLs; no workaround was attempted. Terminal HTTP checks do not prove browser interactivity.
+Reconnect GitHub as hekaputra-higher with selah-still access; reconnect Supabase and Vercel for Higher Vision Ventures. No new organization choice is needed unless multiple matching entities appear. Approve an actual quoted Supabase cost only if required.
+For the minimum viable workshop fallback, download this package, preinstall/start the two local copies, open offline HTML, and rehearse the C/D flow with a stopwatch on the presenting laptop. Make the local attendee START-HERE resource available to participants. Check sign-ins, notifications, phone layout, charger/adapter and hotspot.
 
-Current Supabase changelog and [RLS documentation](https://supabase.com/docs/guides/database/postgres/row-level-security) were reviewed. No relevant migration-breaking change was identified for this simple schema. Creating policies alone is not passing a live access test.
-
-**NOT READY FOR TONIGHT** under the requested full-stack acceptance criteria. The UI/rehearsal fallback remains available, but cannot substitute for the missing privacy and release evidence.
+**NOT READY FOR TONIGHT** until either the full-stack acceptance gates pass or the local/offline fallback is actually rehearsed on the laptop.

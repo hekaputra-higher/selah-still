@@ -1,50 +1,38 @@
-# Selah Still workshop preparation
+# Selah Still — Higher Vision Ventures
 
-Next.js + TypeScript + Supabase, prepared for FaithTech Vancouver on September 10, 2026.
+Use the Higher Vision Ventures GitHub account, Supabase organization and Vercel team only. Repository: https://github.com/hekaputra-higher/selah-still . The current connection can read this public repository but cannot push. Old cloud deployment links are retired from this handoff.
 
-## Run
+## Run locally
 
-Use Node 22 or newer. From this folder:
+Node 22 or newer. From this directory:
 
+```sh
+npm ci
+npm run quality
+npm run start -- --port 3001
 ```
+
+For a separate live copy, in another terminal from this directory:
+
+```sh
+git worktree add ../selah-still-live demo/live
+cd ../selah-still-live
 npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. Without Supabase configuration the reading flow works; account saving is unavailable. Sign in → Enter local rehearsal enables explicitly labelled fictional tab-local saving.
+If that worktree exists, enter it instead of recreating it. Live is http://localhost:3000; backup is http://localhost:3001. Do not start two servers from one directory. Keep the backup unconfigured for rehearsal-only operation until an intentional backend setup is verified. For a prepared full-stack fallback use a separate known-good configured copy or verified Higher Vision Ventures production release.
 
-For real accounts, copy .env.example to .env.local, provision the dedicated backend using supabase/README.md, fill in URL and publishable key, then restart. Never commit the environment file.
+The existing 06-local-recovery checkpoint fixes the development-server module mismatch. New 07-hvv-handoff adds environment correction and fallback instructions; no product features change. Old tags are preserved.
 
-## Verify
+## Connect the full-stack environment
 
-```
-npm run quality
-npm run test:e2e
-npm run test:rls
-npm run preflight
-```
+Read workshop/CONNECTIONS.md. The local origin targets the correct repository; no push has succeeded. After the GitHub connection is authorized, push main, demo/live and tags. Do not force-push or replace existing remote history if it has changed.
 
-Browser test setup: `npx playwright install chromium`. Live RLS needs two confirmed accounts in ignored .env.local. See the readiness report for checks actually run in this preparation session.
+Create/use the dedicated Higher Vision Ventures Supabase project. Apply supabase/migrations only there. Copy .env.example to ignored .env.local and fill only the new project's URL and browser-safe publishable key. Configure the same intended project in Vercel Preview/Production after team ownership is verified. Never use privileged browser credentials.
 
-## Facilitate
+## Checks and facilitation
 
-- workshop/technical-runbook.md: timed script aligned with the existing deck and four activities.
-- workshop/live-prompts.md: 18 copy/paste prompts.
-- workshop/recovery.md: worktrees and emergency fallback.
-- workshop/START-HERE.md and /workshop: participant entry point.
-- workshop/cosmos-brief.md: moodboard preparation.
-- workshop/manual-preflight.md: leaving-the-house check.
-- docs/: concise project context.
+npm run quality includes formatting, lint, types, tests and production build. npm run test:rls requires two distinct confirmed synthetic accounts. npm run preflight checks configured services. Read workshop/readiness.md for actual evidence.
 
-## GitHub and Vercel
-
-A local Git history and checkpoint tags are included. The connected GitHub tool exposes no repository-creation operation; no unrelated repository was modified. To finish, create an empty dedicated GitHub repository, then:
-
-```
-git remote add origin https://github.com/YOUR-OWNER/selah-still-workshop.git
-git push -u origin main --tags
-```
-
-Create demo/live from 05-finished and use prompts 5–6 for a real small change. After verification, push it and open the PR using workshop/demo-pr.md. Link this repository to the existing Vercel project `selah-still-workshop`, add Supabase variables to Preview and Production, and rebuild. Non-main pushes should create previews; verify the actual commit and URL. Do not claim Git-triggered deployment is verified until that push has happened.
-
-The initial direct Vercel deployment contains public reading and labelled rehearsal mode only. The private journal is not ready until backend setup and the live Auth/RLS test pass.
+Use workshop/TONIGHT-CUE-SHEET.md, live-prompts.md, FALLBACK-MODES.md and EMERGENCY.md. The attendee resource is workshop/START-HERE.md, or /workshop on the final verified Higher Vision Ventures deployment. No final public URL or QR is available yet.

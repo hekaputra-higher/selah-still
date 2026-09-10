@@ -1,6 +1,6 @@
 # Backend setup
 
-Create a dedicated Selah Still project. Do not use the hyperlocal database.
+Create or inspect a dedicated Selah Still project under Higher Vision Ventures only. The current connection must be reauthorized before this organization is visible.
 Use the Supabase CLI migration in this directory: link the project, inspect `supabase db push --dry-run`, then `supabase db push`. Verify commands with the installed CLI's `--help`.
 
 Copy the project URL and publishable key into .env.local and both Vercel Preview/Production environments. Restart/rebuild after changing NEXT_PUBLIC values.
