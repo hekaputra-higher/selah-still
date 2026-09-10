@@ -7,7 +7,7 @@ Never use reset --hard or git clean on stage.
 Keep the extracted `selah-still` folder as the known-good copy. Duplicate it to `selah-still-live` for experiments, or use a worktree after all tags exist:
 
 ```
-git worktree add ../selah-still-live -b demo/live 05-finished
+git worktree add ../selah-still-live demo/live
 cd ../selah-still-live
 npm ci
 ```
