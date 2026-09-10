@@ -1,0 +1,24 @@
+# Tonight: 40-minute cue sheet
+
+This operational timing supersedes the timing table in technical-runbook.md; keep the existing deck/guide and its four activities. The complete live rehearsal is BLOCKED until Supabase and GitHub are connected. These are target timings, not measured delivery times.
+
+| Timer | Screen / action                                                                               | Words / prompt                                                                                                      | Recovery / transition                                                                                                 |
+| ----- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| 0–4   | Opening + finished Selah Still. Activity 1: hands up; two ten-second project shares.          | “A quiet place to slow down with Scripture. What problem are we solving?”                                           | Limit shares. “First, decide what belongs in the smallest useful version.”                                            |
+| 4–9   | docs/vision, requirements, architecture and quality.                                          | Show the passage → optional chapter → D.W.E.L.L. → account/save/retrieve flow. Roadmap discovery remains excluded.  | Show prepared files. “Now turn a feeling into design decisions.”                                                      |
+| 9–13  | Cosmos references and design-direction.md.                                                    | “What do these references have in common?” Take one observation within your explanation, not another game.          | If Cosmos fails, use the existing design brief. “Now compare what those decisions change.”                            |
+| 13–20 | First coding checkpoint. Activity 2: A/B vote, two reasons (2 minutes). Editor and local app. | Copy prompts 4–6 from live-prompts.md: inspect, plan, then only the character hint. Show one small iteration.       | At 60 seconds of unproductive waiting switch to the prepared app. “Our interface also makes a promise about privacy.” |
+| 20–27 | App + schema + real test output, if available. Activity 3: public/private vote (90 seconds).  | “Should I be able to read Sarah’s private reflection?” Save → refresh → retrieve. Show actual two-user test output. | If blocked say so; show SQL and fictional rehearsal UI. “Now check whether the evidence supports our confidence.”     |
+| 27–32 | Quality outputs. Activity 4: would-you-ship (90 seconds).                                     | “Great. It works. We’re not done.” Run npm test; show completed lint/types/build evidence.                          | Do not reinstall. “Now connect the checked change to a release.”                                                      |
+| 32–37 | Diff → commit → push → PR → Preview → review → merge.                                         | Explain why review happens before production. This section needs the real connected repo.                           | If service blocked show local history and clearly name the missing steps. “Let’s see the released experience.”        |
+| 37–40 | Production then /workshop.                                                                    | Recap the workflow. “Now it’s your turn. Something exists when you leave that did not exist when you arrived.”      | Share attendee URL and stop teaching at minute 40.                                                                    |
+
+If time is tight: skip optional shares after the first two, use saved build evidence, show one UI iteration only, and stop tool troubleshooting after 60 seconds. Do not remove the privacy lesson or participant handoff.
+
+## Actual rehearsal record
+
+- Full presentation: NOT RUN; real backend and GitHub → Preview → production acceptance gates remain blocked.
+- Successful terminal recovery drill: 4.1 seconds, after resolving the module-format bug.
+- Earlier setup attempts lost time to an already-running dev server and then a CommonJS/ES-module mismatch. The mismatch is fixed in the package. Prestart both copies; never start a second server from the same directory.
+- Browser verified production reading, chapter, D.W.E.L.L., empty-save validation, fictional save/retrieve and the attendee link. Cloud browser policies blocked localhost and file://; laptop visual checks remain yours.
+- A successful automated recovery drill is not a 35–40-minute facilitation rehearsal. Use an actual stopwatch for the final run and record elapsed time at each boundary above without stopping it for troubleshooting.

@@ -1,76 +1,43 @@
-# Readiness — 10 September 2026
+# WORKSHOP READINESS — verification follow-up
 
-**NOT READY FOR TONIGHT for the requested full-stack demonstration.** The public Scripture/D.W.E.L.L. experience and explicit rehearsal fallback are usable. Real account persistence, two-user RLS evidence and GitHub → Preview → merge are not yet verified.
+| Area               | Status  | Evidence                                                                                                                        |
+| ------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| SELAH STILL        | WARNING | Production UI/rehearsal verified; real account persistence blocked. Local development module-format bug fixed.                  |
+| SUPABASE           | BLOCKED | Only unrelated hyperlocal os dev project is accessible. Organization/cost decision pending.                                     |
+| RLS PRIVACY TEST   | BLOCKED | Test expanded to include owner update and re-login retrieval; cannot run without dedicated backend/two accounts.                |
+| GITHUB             | BLOCKED | Dedicated repository search returned no results. Local checkpoints preserved; no remote/PR.                                     |
+| VERCEL PREVIEW     | WARNING | Existing preview shows Vercel sign-in; app behind it not tested this session. Git-triggered flow blocked.                       |
+| VERCEL PRODUCTION  | WARNING | Public UI and attendee page tested. No real backend configured.                                                                 |
+| QUALITY CHECKS     | READY   | Formatting, lint, types, three tests and production build passed after module correction. Mobile/axe remain unexecuted.         |
+| LIVE DEMO          | BLOCKED | Full timed rehearsal cannot complete while backend/release gates are blocked.                                                   |
+| ATTENDEE RESOURCES | READY   | Ten-step public start page and working link checked at desktop size; phone check remains.                                       |
+| LOCAL BACKUP       | WARNING | Terminal verified HTTP 200 while live was broken; laptop/browser visual checks remain.                                          |
+| OFFLINE BACKUP     | WARNING | Self-contained resources and JavaScript syntax checked. Cloud browser blocks local files; actual opening remains a laptop task. |
 
-| Area               | Status  | Evidence / remaining gate                                                                                                                          |
-| ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Selah Still        | WARNING | Production browser: passage, full chapter, all five prompts, sign-in handoff, rehearsal save/retrieve passed. Real account saving unavailable.     |
-| Supabase           | BLOCKED | Migration, ownership policies and two-user test prepared. No dedicated project provisioned; no Auth/RLS live test.                                 |
-| GitHub             | BLOCKED | Local Git commits, six checkpoint tags and demo branch prepared. Connected access exposes only unrelated hyperlocal-os; no dedicated remote or PR. |
-| Vercel             | WARNING | Production READY and browser checked. Separate preview READY but redirects to Vercel login. Git-triggered preview/release not verified.            |
-| Live demo          | WARNING | 40-minute runbook, prompts and four activities ready. Backend/release claims must wait for evidence.                                               |
-| Attendee resources | READY   | Public /workshop entry page checked; generic starter installs and production build passed.                                                         |
-| Backups            | WARNING | Offline HTML and two actual rehearsal screenshots included; rehearse opening them on the presenting laptop.                                        |
+## What changed
 
-## Verified evidence
+- Fixed package type from CommonJS to ES modules in Selah Still and generic starter. This resolved observed HTTP 500 development compilation errors; production-only checks had missed them.
+- Added missing owner-update and retrieval-after-re-login assertions to the real Supabase test. No policy changes or new product features.
+- Preserved all old tags; new 06-local-recovery is the latest usable code checkpoint. main and demo/live include the fix. 05-finished remains historical and should not be used to start the live dev server.
+- Added TONIGHT-CUE-SHEET.md with the requested 0–40 minute rhythm, keeping four activities, plus one-screen EMERGENCY.md and LAPTOP.md.
 
-- Main app formatting, ESLint, TypeScript, three validation tests and production build passed.
-- Production browser verified the complete fictional rehearsal journey; no app console errors observed. This is not evidence of Supabase persistence.
-- Desktop layout had no horizontal overflow at the inspected viewport. Mobile and automated axe/E2E checks are authored but not executed: these remain gates.
-- Production dependency audit reported zero vulnerabilities at preparation time. This is a limited package audit, not a security certification.
-- Generic starter npm ci, formatting, lint, types and production build passed. Its single test is an explicit TODO for participants, not a product verification.
-- Preflight script reports missing backend/GitHub/deployment configuration as warnings, rather than inventing passing checks.
+## Rehearsal result
 
-## Live links
+Full 35–40-minute rehearsal: NOT RUN / BLOCKED. No invented total or presentation timings.
+Terminal recovery drill: 4.1 seconds successful run. Deliberate page syntax error → live HTTP 500 → backup HTTP 200 → exact original restored → live HTTP 200.
+Prior attempts exposed duplicate-server startup and the module-format bug. Fix applied; prestart the two separate copies.
 
-- Production: https://selah-still-workshop.vercel.app
-- Attendee entry: https://selah-still-workshop.vercel.app/workshop
-- A/B exercise: https://selah-still-workshop.vercel.app/compare
-- Preview (Vercel login required): https://selah-still-workshop-irn6lrzin-hyperlocal-tech-co.vercel.app
+## Minimum unblock actions
 
-## Critical actions before leaving
+1. Hadi selects the dedicated Supabase project's organization. The only visible choice is hyperlocal tech co (vtuwziqrfnohsidmvlrc). The Supabase get_cost tool explicitly says to ask the user for the organization first, then repeat the quoted cost for confirmation. No creation cost has yet been quoted or approved.
+2. Create an empty selah-still-workshop GitHub repository and grant the existing connection access. Available connector tools cannot create a repository. After access is available, the prepared history can be pushed and a PR created.
+3. Complete dedicated backend provisioning, migration, public configuration, two synthetic confirmed accounts and live RLS tests; then Git-linked Preview/merge/Production verification.
+4. Hadi runs the laptop checks and uninterrupted full rehearsal, including mobile and offline opening, after the technical blockers are resolved.
 
-1. Confirm whether the dedicated Supabase project should belong to **hyperlocal tech co**. The provisioning tool explicitly requires organization selection and cost confirmation; it has not been created under the existing organization by assumption.
-2. Create an empty **selah-still-workshop** GitHub repository in the intended account and grant this connection access. The available GitHub connection cannot create repositories. Do not use the unrelated hyperlocal-os repository.
-3. After provisioning: apply the committed migration, set the URL/publishable key locally and on Vercel, create two confirmed synthetic demo accounts, run npm run test:rls, rebuild/deploy, and verify real save/retrieve on mobile. No service-role key belongs in browser code.
-4. Connect the dedicated GitHub repo to Vercel; verify the actual feature branch → PR → Preview → checked merge → production path. Log in to Vercel on the presenting browser before opening protected previews.
-5. On the presenting laptop: npm ci and npm run preflight; prepare both local copies below, download deck/backups, open offline.html, arrange tabs and enable Do Not Disturb. Do this while internet is available.
+## Evidence and limits
 
-If these cannot be completed in time, explicitly present the UI/rehearsal version and explain backend policies from source. Do not describe the full-stack demo as verified.
+The production browser checks covered chapter expansion, step focus/labels, empty-save alert, sign-in handoff, fictional rehearsal save/retrieve, attendee navigation and no desktop overflow. No app-origin console errors were observed; browser-extension metadata errors were separate. The cloud browser explicitly blocks localhost and file URLs; no workaround was attempted. Terminal HTTP checks do not prove browser interactivity.
 
-## Live starting point
+Current Supabase changelog and [RLS documentation](https://supabase.com/docs/guides/database/postgres/row-level-security) were reviewed. No relevant migration-breaking change was identified for this simple schema. Creating policies alone is not passing a live access test.
 
-The included source Git repository has clean main, tags 00-starter through 05-finished, and demo/live at the finished checkpoint. Dependency folders and builds are excluded from this portable package.
-
-From selah-still:
-
-```sh
-npm ci
-npm run build
-npm run start -- --port 3001
-```
-
-In a second terminal, from selah-still (demo/live already exists):
-
-```sh
-git worktree add ../selah-still-live demo/live
-cd ../selah-still-live
-npm ci
-npm run dev
-```
-
-Use http://localhost:3000 for edits and http://localhost:3001 for recovery. Copy .env.local privately to both copies only when configured.
-
-First prompt:
-
-> Read docs/ and inspect the repository without changing files. Summarize the current user journey, the private-data boundary, and the available checks. Propose a narrow plan to add an accessible character-count hint to the reflection field. Do not implement yet. Identify assumptions and wait for my review.
-
-## Emergency recovery
-
-1. Stop interacting with the failing live edit; preserve its files.
-2. Open the already-running http://localhost:3001 known-good copy.
-3. If local execution fails, open the verified production link above.
-4. If internet also fails, open backups/offline.html or the supplied screenshots. The HTML saves fictional writing in the current tab only. Never call this a private cloud journal.
-5. Resume at the next runbook checkpoint. Do not troubleshoot for more than 60 seconds on stage.
-
-No destructive reset or clean command is needed. Read selah-still/workshop/recovery.md before the session.
+**NOT READY FOR TONIGHT** under the requested full-stack acceptance criteria. The UI/rehearsal fallback remains available, but cannot substitute for the missing privacy and release evidence.

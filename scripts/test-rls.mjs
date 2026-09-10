@@ -75,8 +75,32 @@ try {
   const own = await a.from("reflections").select("*").eq("id", id).single();
   assert.ifError(own.error);
   assert.equal(own.data.write_it, "Fictional RLS test");
+  const updated = await a
+    .from("reflections")
+    .update({ write_it: "Fictional owner update" })
+    .eq("id", id)
+    .select()
+    .single();
+  assert.ifError(updated.error);
+  assert.equal(updated.data.write_it, "Fictional owner update");
+  assert.ifError((await a.auth.signOut()).error);
+  assert.ifError(
+    (
+      await a.auth.signInWithPassword({
+        email: env.TEST_USER_A_EMAIL,
+        password: env.TEST_USER_A_PASSWORD,
+      })
+    ).error,
+  );
+  const restored = await a
+    .from("reflections")
+    .select("*")
+    .eq("id", id)
+    .single();
+  assert.ifError(restored.error);
+  assert.equal(restored.data.write_it, "Fictional owner update");
   console.log(
-    "PASS: real Auth, persistence, owner read, cross-user read/update/delete denial, ownership reassignment denial, forged insert denial, anonymous denial.",
+    "PASS: real Auth, owner read/update, persistence after re-login, cross-user read/update/delete denial, ownership reassignment denial, forged insert denial, anonymous denial. Browser refresh remains a separate check.",
   );
 } catch (e) {
   console.error("FAIL:", e.message);
